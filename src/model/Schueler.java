@@ -5,9 +5,6 @@ package model;
  */
 public class Schueler extends Person {
 
-    //Attribute
-
-
     //Referenzen
     private Tadel[] tadelDesSchuelers;
 
@@ -20,15 +17,6 @@ public class Schueler extends Person {
         super(name, alter);
     }
 
-    /**
-     * Ein Kurs wird der Menge der Kurse hinzugefügt.
-     * Da wir auf der Datenstruktur Array arbeiten und diese eine statische Größe hat, müssen wir tricksen.
-     * Überlegt euch etwas kluges!
-     * @param neuerKurs
-     */
-    public void addKurs(Kurs neuerKurs){
-        //TODO Hinzufügen eines Kurses, den ein Schüler aufsuchen muss.
-    }
 
     /**
      * Ein Tadel wird der Menge der Tadel hinzugefügt.
@@ -37,7 +25,13 @@ public class Schueler extends Person {
      * @param neuerTadel
      */
     private void addTadel(Tadel neuerTadel){
-        //TODO Hinzufügen eins Tadels für den Schüler.
+        if(tadelDesSchuelers == 0){
+            tadelDesSchuelers = new Tadel[1];
+            tadelDesSchuelers[0] = neuerTadel;
+        }else{
+            Tadel[] t = new Tadel[tadelDesSchuelers.length + 1];
+            for(int i = 0; i < tadelDesSchuelers.length; i++)
+        }
     }
 
     /**

@@ -32,10 +32,16 @@ public class Person {
      * @param neuerKurs
      */
     public void addKurs(int[] array, Kurs neuerKurs){
-        int[] newArray = new int[array.length+1];
-        newArray = array;
-        //array[array.length-1] = neuerKurs;
-       //
-
+        if(kurseDerPerson == null) {
+            kurseDerPerson = new Kurs[1];
+            kurseDerPerson[0] = neuerKurs;
+        }else{
+            Kurs[] maridiat = new Kurs[kurseDerPerson.length + 1];
+            for (int i = 0; i < kurseDerPerson.length; i++){
+                maridiat[i] = kurseDerPerson[i];
+            }
+            maridiat[kurseDerPerson.length] = neuerKurs;
+            kurseDerPerson = maridiat;
+        }
     }
 }

@@ -39,7 +39,15 @@ public class Lehrer extends Person{
      * @param neuesFach
      */
     public void addFach(Unterrichtsfach neuesFach){
-        //TODO Hinzufügen eines Faches, das ein Lehrer unterrichten kann.
+        if(faecherDesLehrers == null) {
+            faecherDesLehrers = new Unterrichtsfach[1];
+            faecherDesLehrers[0] = neuesFach;
+        }else{
+            Unterrichtsfach[] biologie = new Unterrichtsfach[faecherDesLehrers.length + 1];
+            for(int i = 0; i < faecherDesLehrers.length; i++){
+                faecherDesLehrers = biologie;
+            }
+        }
     }
 
     /**
