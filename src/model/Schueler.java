@@ -25,7 +25,7 @@ public class Schueler extends Person {
      * @param neuerTadel
      */
     private void addTadel(Tadel neuerTadel){
-        if(tadelDesSchuelers == 0){
+        if(tadelDesSchuelers == null){
             tadelDesSchuelers = new Tadel[1];
             tadelDesSchuelers[0] = neuerTadel;
         }else{
