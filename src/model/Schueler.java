@@ -30,7 +30,7 @@ public class Schueler extends Person {
             tadelDesSchuelers[0] = neuerTadel;
         }else{
             Tadel[] t = new Tadel[tadelDesSchuelers.length + 1];
-            for(int i = 0; i < tadelDesSchuelers.length; i++)
+            for(int i = 0; i < tadelDesSchuelers.length; i++);
         }
     }
 
@@ -41,7 +41,7 @@ public class Schueler extends Person {
      */
     public String getInfo(){
         String info = "";
-        //TODO Kompakte Zeichenkette zu den Informationen eines Schülers - gut lesbar!
+        info = getName() + getAlter() + tadelDesSchuelers;
         return info;
     }
 }

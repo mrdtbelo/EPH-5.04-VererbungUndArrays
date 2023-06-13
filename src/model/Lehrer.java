@@ -57,7 +57,7 @@ public class Lehrer extends Person{
      */
     public String getInfo(){
         String info = "";
-        //TODO Kompakte Zeichenkette zu den Informationen einer Lehrkraft - gut lesbar!
+        info = getName() + getAlter() + getBesoldungsGruppe() + faecherDesLehrers;
         return info;
     }
 }
